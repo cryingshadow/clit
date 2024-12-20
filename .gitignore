@@ -33,3 +33,4 @@ build
 .project
 .settings/
 test-output/
+build.sh

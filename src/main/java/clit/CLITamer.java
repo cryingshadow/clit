@@ -3,7 +3,7 @@ package clit;
 import java.lang.reflect.*;
 import java.util.*;
 
-public class CLITamer<T extends Enum<T> & Flag> {
+public class CLITamer<T extends Enum<T> & Parameter> {
 
     private final T[] flags;
 

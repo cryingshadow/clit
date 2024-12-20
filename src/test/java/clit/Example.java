@@ -1,6 +1,6 @@
 package clit;
 
-public enum Example implements Flag {
+public enum Example implements Parameter {
 
     OTHER("o", "other", "This is another test description."),
 

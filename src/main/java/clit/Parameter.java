@@ -1,6 +1,6 @@
 package clit;
 
-public interface Flag {
+public interface Parameter {
 
     String description();
     String longName();
