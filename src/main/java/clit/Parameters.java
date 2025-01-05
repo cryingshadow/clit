@@ -15,21 +15,21 @@ public class Parameters<T extends Enum<T> & Parameter> extends LinkedHashMap<T, 
     }
 
     @SuppressWarnings("unchecked")
-    public boolean containsAtLeastOne(final T... flags) {
-        for (final T flag : flags) {
-            if (this.containsKey(flag)) {
+    public boolean containsAtLeastOne(final T... parameters) {
+        for (final T parameter : parameters) {
+            if (this.containsKey(parameter)) {
                 return true;
             }
         }
         return false;
     }
 
-    public boolean getAsBoolean(final T flag) {
-        return Boolean.parseBoolean(this.get(flag));
+    public boolean getAsBoolean(final T parameter) {
+        return Boolean.parseBoolean(this.get(parameter));
     }
 
-    public int getAsInt(final T flag) {
-        return Integer.parseInt(this.get(flag));
+    public int getAsInt(final T parameter) {
+        return Integer.parseInt(this.get(parameter));
     }
 
 }
