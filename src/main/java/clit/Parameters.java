@@ -28,8 +28,16 @@ public class Parameters<T extends Enum<T> & Parameter> extends LinkedHashMap<T, 
         return Boolean.parseBoolean(this.get(parameter));
     }
 
+    public boolean getAsBooleanOrDefault(final T parameter, final boolean defaultValue) {
+        return this.containsKey(parameter) ? Boolean.parseBoolean(this.get(parameter)) : defaultValue;
+    }
+
     public int getAsInt(final T parameter) {
         return Integer.parseInt(this.get(parameter));
+    }
+
+    public int getAsIntOrDefault(final T parameter, final int defaultValue) {
+        return this.containsKey(parameter) ? Integer.parseInt(this.get(parameter)) : defaultValue;
     }
 
 }
