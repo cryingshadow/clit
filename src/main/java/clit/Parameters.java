@@ -40,4 +40,12 @@ public class Parameters<T extends Enum<T> & Parameter> extends LinkedHashMap<T, 
         return this.containsKey(parameter) ? Integer.parseInt(this.get(parameter)) : defaultValue;
     }
 
+    public boolean hasKeySetToValue(final T key, final int value) {
+        return this.containsKey(key) && Integer.parseInt(this.get(key)) == value;
+    }
+
+    public boolean hasKeySetToValue(final T key, final String value) {
+        return this.containsKey(key) && this.get(key).equals(value);
+    }
+
 }
